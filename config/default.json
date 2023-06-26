@@ -1,0 +1,11 @@
+{
+  "PROJECT_NAME": "content-management-api",
+  "ENVIRONMENT": "development",
+  "PORT": 8081,
+  "DEFAULT_LANGUAGE": "en",
+  "AVAILABLE_LOCALS": [ "en" ],
+  "SESSION_SECRET": "b9b25807da556cf20774d7e9",
+  "JWT_SECRET": "d17a59c10b914e750575d77c",
+  "ENCRYPTION_KEY": "d17a59c10b914e750575d77c",
+  "CORS_WHITELIST": [ "http://localhost:8001/", "http://localhost:3000" ]
+}
