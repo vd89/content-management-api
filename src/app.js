@@ -8,6 +8,7 @@ import { errHandler, headerFunction, notFound, unauthorizedErrors } from './midd
 import { testAuth } from './helper/extraHelper.js';
 import { extendedRequestMiddleware } from './middleware/index.js';
 import  I18n  from 'i18n';
+import apiRoutes from './routes/index.js';
 
 const app = express();
 const { whiteList,availableLocals , projectRoot,defaultLanguage} = appConfig;
@@ -49,6 +50,7 @@ app.all('*', headerFunction);
 app.use(extendedRequestMiddleware);
 // route
 app.get('/', testAuth);
+app.use('/api', apiRoutes);
 app.use(unauthorizedErrors);
 app.use(errHandler);
 app.use(notFound);
